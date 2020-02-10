@@ -1,0 +1,50 @@
+PODS:
+  - BigInt (5.0.0)
+  - Differentiator (4.0.1)
+  - RxCocoa (5.0.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxFeedback (3.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.0.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.1)
+  - web3.swift (0.3.4):
+    - BigInt (~> 5.0.0)
+
+DEPENDENCIES:
+  - RxCocoa (~> 5.0)
+  - RxDataSources (~> 4.0)
+  - RxFeedback (~> 3.0)
+  - RxSwift (~> 5.0)
+  - web3.swift (~> 0.3)
+
+SPEC REPOS:
+  trunk:
+    - BigInt
+    - Differentiator
+    - RxCocoa
+    - RxDataSources
+    - RxFeedback
+    - RxRelay
+    - RxSwift
+    - web3.swift
+
+SPEC CHECKSUMS:
+  BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
+  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  web3.swift: 107bfa1ccc14b2c2aa03035f6a395e32682a4429
+
+PODFILE CHECKSUM: d32ab8ab53625087b603f177f07eb22aa6e508b8
+
+COCOAPODS: 1.8.4
