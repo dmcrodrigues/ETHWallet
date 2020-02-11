@@ -2,24 +2,30 @@ import Foundation
 import BigInt
 import RxSwift
 import RxSwiftExt
+import RxCocoa
 import RxFeedback
 import web3
 
-public final class HomeViewModel {
+final class HomeViewModel {
     private let system: Observable<State>
     private let disposeBag = DisposeBag()
 
+    let inputsSubject = PublishRelay<Input>()
+
     var balance: Observable<String> {
         system.asObservable()
-            .map { state in state.balance.quotientAndRemainder(dividingBy: BigUInt(1000000000000000000)) }
-            .map { result in
-                "\(result.quotient).\(result.remainder) ETH"
-            }
+            .map { state in "\(state.balance.toEther) ETH" }
     }
 
-    init(walletService: WalletServiceProtocol, storage: EthereumKeyStorageProtocol, router: @escaping Router<Route>, scheduler: ImmediateSchedulerType = MainScheduler.instance) {
+    init(
+        walletAddress: EthereumAddress,
+        walletService: WalletServiceProtocol,
+        storage: EthereumKeyStorageProtocol,
+        router: @escaping Router<Route>,
+        scheduler: ImmediateSchedulerType = MainScheduler.instance
+    ) {
         system = Observable.system(
-            initialState: State.initial,
+            initialState: State(wallet: walletAddress),
             reduce: Self.reduce,
             scheduler: scheduler,
             feedback: [
@@ -27,11 +33,20 @@ public final class HomeViewModel {
                 Feedbacks.whenLoadingBalance(walletService: walletService, scheduler: scheduler)
             ]
         ).share()
+
+        Observable.combineLatest(
+            inputsSubject.asObservable(),
+            system.map { $0.wallet }
+            )
+            .subscribe(onNext: { input, account in
+                router(.viewTransfers(wallet: account))
+            })
+            .disposed(by: disposeBag)
     }
 
     func viewDidLoad() {
         system
-            .debug("System")
+            .debug("[Home]")
             .subscribe()
             .disposed(by: disposeBag)
     }
@@ -55,25 +70,19 @@ extension HomeViewModel {
                                 requestAccount(with: storage, router)
                             }
                     }
+                    .observeOn(scheduler)
             }
         }
 
         fileprivate static func whenLoadingBalance(walletService: WalletServiceProtocol, scheduler: ImmediateSchedulerType) -> Feedback {
             return { state in
                 state
-                    .filterMap { state -> FilterMap<EthereumAccount> in
-                        guard
-                            state.status == .loadingBalance,
-                            let account = state.account
-                            else { return .ignore }
-
-                        return .map(account)
-                    }
-                    .flatMapLatest { account -> Observable<Event> in
-                        walletService.balance(of: EthereumAddress(account.address), block: .Latest)
+                    .filter { $0.status == .loadingBalance }
+                    .flatMapLatest { state -> Observable<Event> in
+                        walletService.balance(of: state.wallet, block: .Latest)
                             .observeOn(scheduler)
                             .map(Event.didLoadBalance)
-                }
+                    }
             }
         }
 
@@ -126,9 +135,11 @@ extension HomeViewModel {
     static func reduce(_ state: State, _ event: Event) -> State {
         switch event {
         case .didLoadBalance(let balance):
-            return State(status: .ready, balance: balance)
+            return state
+                .set(\.balance, balance)
+                .set(\.status, .ready)
         case .didFailLoadBalance:
-            fatalError()
+            fatalError("didFailLoadBalance has not been implemented")
         case .didLoadAccount(let account):
             return state
                 .set(\.account, account)
@@ -148,13 +159,11 @@ extension HomeViewModel {
             case ready
         }
 
-        var status: Status
+        let wallet: EthereumAddress
+
+        var status: Status = .loadingAccount
         var account: EthereumAccount?
         var balance: BigUInt = 0
-
-        static var initial: State {
-            return State(status: .loadingAccount)
-        }
     }
 
     enum Event {
@@ -165,12 +174,12 @@ extension HomeViewModel {
     }
 
     enum Input {
-        case refresh
-        case didSelectItem(index: Int)
+        case viewTransfers
     }
 
     enum Route {
         case loadAccount(completion: (String?) -> Void)
+        case viewTransfers(wallet: EthereumAddress)
     }
 }
 

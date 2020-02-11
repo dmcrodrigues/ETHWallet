@@ -18,6 +18,10 @@
 		A6C4802123F32A2F00E378EF /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4802023F32A2F00E378EF /* HomeBuilder.swift */; };
 		A6C4802623F331C800E378EF /* String+Localisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4802523F331C800E378EF /* String+Localisation.swift */; };
 		A6C4802F23F334FE00E378EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6C4803123F334FE00E378EF /* Localizable.strings */; };
+		A6C4803423F33A9300E378EF /* TransfersBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4803323F33A9300E378EF /* TransfersBuilder.swift */; };
+		A6C4803623F33A9E00E378EF /* TransfersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4803523F33A9E00E378EF /* TransfersViewController.swift */; };
+		A6C4803823F351DC00E378EF /* TransfersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4803723F351DC00E378EF /* TransfersViewModel.swift */; };
+		A6C4803A23F35C9C00E378EF /* TransferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4803923F35C9C00E378EF /* TransferCell.swift */; };
 		A6CE43EE23F1E059004C6D41 /* ERC20+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE43ED23F1E059004C6D41 /* ERC20+Rx.swift */; };
 		A6CE43F023F1E0E7004C6D41 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE43EF23F1E0E7004C6D41 /* Network.swift */; };
 		A6CE43F223F1E4AA004C6D41 /* EthereumClient+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE43F123F1E4AA004C6D41 /* EthereumClient+Rx.swift */; };
@@ -31,6 +35,7 @@
 		A6CE440723F227B0004C6D41 /* KeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE440623F227B0004C6D41 /* KeyStorage.swift */; };
 		A6CE440923F2A89C004C6D41 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE440823F2A89C004C6D41 /* Setter.swift */; };
 		A6DE0AAA23F1DC2800B30CAE /* WalletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DE0AA923F1DC2800B30CAE /* WalletService.swift */; };
+		A6E54F3923F36E3E008ED2F1 /* EtherConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E54F3823F36E3E008ED2F1 /* EtherConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,10 @@
 		A6C4802523F331C800E378EF /* String+Localisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localisation.swift"; sourceTree = "<group>"; };
 		A6C4802B23F3326300E378EF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6C4803023F334FE00E378EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A6C4803323F33A9300E378EF /* TransfersBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersBuilder.swift; sourceTree = "<group>"; };
+		A6C4803523F33A9E00E378EF /* TransfersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersViewController.swift; sourceTree = "<group>"; };
+		A6C4803723F351DC00E378EF /* TransfersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersViewModel.swift; sourceTree = "<group>"; };
+		A6C4803923F35C9C00E378EF /* TransferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCell.swift; sourceTree = "<group>"; };
 		A6CE43ED23F1E059004C6D41 /* ERC20+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ERC20+Rx.swift"; sourceTree = "<group>"; };
 		A6CE43EF23F1E0E7004C6D41 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		A6CE43F123F1E4AA004C6D41 /* EthereumClient+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EthereumClient+Rx.swift"; sourceTree = "<group>"; };
@@ -86,6 +95,7 @@
 		A6CE440623F227B0004C6D41 /* KeyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStorage.swift; sourceTree = "<group>"; };
 		A6CE440823F2A89C004C6D41 /* Setter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setter.swift; sourceTree = "<group>"; };
 		A6DE0AA923F1DC2800B30CAE /* WalletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletService.swift; sourceTree = "<group>"; };
+		A6E54F3823F36E3E008ED2F1 /* EtherConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtherConverter.swift; sourceTree = "<group>"; };
 		C6C7B94B9BD2D9EE03476F46 /* Pods-ETHWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETHWallet.release.xcconfig"; path = "Target Support Files/Pods-ETHWallet/Pods-ETHWallet.release.xcconfig"; sourceTree = "<group>"; };
 		E21FB3E296A0B7AC3C52955B /* Pods-ETHWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETHWallet.debug.xcconfig"; path = "Target Support Files/Pods-ETHWallet/Pods-ETHWallet.debug.xcconfig"; sourceTree = "<group>"; };
 		E49A905DE697076BF7510F79 /* Pods_ETHWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ETHWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +199,17 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		A6C4803223F33A8000E378EF /* Transfers */ = {
+			isa = PBXGroup;
+			children = (
+				A6C4803323F33A9300E378EF /* TransfersBuilder.swift */,
+				A6C4803523F33A9E00E378EF /* TransfersViewController.swift */,
+				A6C4803923F35C9C00E378EF /* TransferCell.swift */,
+				A6C4803723F351DC00E378EF /* TransfersViewModel.swift */,
+			);
+			path = Transfers;
+			sourceTree = "<group>";
+		};
 		A6CE43EC23F1E04D004C6D41 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +217,7 @@
 				A6CE43ED23F1E059004C6D41 /* ERC20+Rx.swift */,
 				A6CE440823F2A89C004C6D41 /* Setter.swift */,
 				A6C4802523F331C800E378EF /* String+Localisation.swift */,
+				A6E54F3823F36E3E008ED2F1 /* EtherConverter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,6 +235,7 @@
 		A6CE43FE23F21932004C6D41 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A6C4803223F33A8000E378EF /* Transfers */,
 				A6CE43FF23F21936004C6D41 /* Home */,
 			);
 			path = Screens;
@@ -424,10 +447,15 @@
 				A6CE43FB23F217C9004C6D41 /* AppCoordinator.swift in Sources */,
 				A6DE0AAA23F1DC2800B30CAE /* WalletService.swift in Sources */,
 				A6A436D223EDDA6900B3A058 /* ViewController.swift in Sources */,
+				A6C4803623F33A9E00E378EF /* TransfersViewController.swift in Sources */,
+				A6C4803423F33A9300E378EF /* TransfersBuilder.swift in Sources */,
 				A6CE43F523F213A1004C6D41 /* ERC20Service.swift in Sources */,
 				A6C4802623F331C800E378EF /* String+Localisation.swift in Sources */,
+				A6E54F3923F36E3E008ED2F1 /* EtherConverter.swift in Sources */,
 				A6CE43F023F1E0E7004C6D41 /* Network.swift in Sources */,
+				A6C4803823F351DC00E378EF /* TransfersViewModel.swift in Sources */,
 				A6CE43F923F214E2004C6D41 /* World.swift in Sources */,
+				A6C4803A23F35C9C00E378EF /* TransferCell.swift in Sources */,
 				A6A436CE23EDDA6900B3A058 /* AppDelegate.swift in Sources */,
 				A6A436D023EDDA6900B3A058 /* SceneDelegate.swift in Sources */,
 				A6CE440123F21C13004C6D41 /* HomeViewModel.swift in Sources */,

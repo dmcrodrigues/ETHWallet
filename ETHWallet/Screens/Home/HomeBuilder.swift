@@ -1,13 +1,17 @@
 import UIKit
+import web3
 
 struct HomeBuilder {
 
     static func makeHome(with router: @escaping Router<HomeViewModel.Route>) -> UIViewController {
-        let viewModel = HomeViewModel(walletService: Current.services.wallet, storage: Current.storage, router: router)
-
-        return UINavigationController(
-          rootViewController: HomeViewController(viewModel: viewModel)
+        let viewModel = HomeViewModel(
+            walletAddress: EthereumAddress("0x70ABd7F0c9Bdc109b579180B272525880Fb7E0cB"),
+            walletService: Current.services.wallet,
+            storage: Current.storage,
+            router: router
         )
+
+        return HomeViewController(viewModel: viewModel)
     }
 
     static func makeLoadAccount(completion: @escaping (String?) -> Void) -> UIViewController {

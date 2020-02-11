@@ -1,7 +1,12 @@
 "home.wallet_balance.title" = "Wallet Balance";
+"home.view_transfers_button.title" = "View ERC20 Transfers";
 
 "load_account.title" = "Private Key";
 "load_account.message.default" = "Please provide your private key";
 "load_account.message.preloaded_key" = "Please provide your private key (preloaded the private key found on environment)";
 "load_account.input.placeholder" = "Private Key 0x...";
 "load_account.confirm_button.title" = "Confirm";
+
+"transfers.cell.from.label" = "From: %@";
+"transfers.cell.to.label" = "To: %@";
+"transfers.cell.value.label" = "Value: %@";

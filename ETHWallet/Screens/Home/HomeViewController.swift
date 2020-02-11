@@ -4,6 +4,7 @@ import RxSwift
 public final class HomeViewController: UIViewController {
     private lazy var walletBalanceTitle = UILabel()
     private lazy var walletBalanceValue = UILabel()
+    private lazy var viewTransfers = UIButton()
 
     private let viewModel: HomeViewModel
     private let disposeBag = DisposeBag()
@@ -37,6 +38,16 @@ public final class HomeViewController: UIViewController {
             wallStack.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
         ])
 
+        viewTransfers.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(viewTransfers)
+
+        NSLayoutConstraint.activate([
+            viewTransfers.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -44),
+            viewTransfers.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            viewTransfers.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
+        ])
+
         self.view = view
     }
 
@@ -49,11 +60,19 @@ public final class HomeViewController: UIViewController {
 
         walletBalanceTitle.text = "home.wallet_balance.title".localized
 
+        viewTransfers.setTitleColor(.blue, for: .normal)
+        viewTransfers.setTitle("home.view_transfers_button.title".localized, for: .normal)
+
         setupBindings()
     }
 
     private func setupBindings() {
         viewModel.balance.bind(to: walletBalanceValue.rx.text)
+            .disposed(by: disposeBag)
+
+        viewTransfers.rx.tap
+            .map { HomeViewModel.Input.viewTransfers }
+            .bind(to: viewModel.inputsSubject)
             .disposed(by: disposeBag)
     }
 }
