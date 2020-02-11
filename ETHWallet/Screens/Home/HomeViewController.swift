@@ -4,6 +4,7 @@ import RxSwift
 public final class HomeViewController: UIViewController {
     private lazy var walletBalanceTitle = UILabel()
     private lazy var walletBalanceValue = UILabel()
+    private lazy var sendButton = UIButton()
     private lazy var viewTransfers = UIButton()
 
     private let viewModel: HomeViewModel
@@ -29,6 +30,10 @@ public final class HomeViewController: UIViewController {
 
         walletBalanceTitle.translatesAutoresizingMaskIntoConstraints = false
         walletBalanceValue.translatesAutoresizingMaskIntoConstraints = false
+        sendButton.translatesAutoresizingMaskIntoConstraints = false
+
+        wallStack.setCustomSpacing(20, after: walletBalanceValue)
+        wallStack.addArrangedSubview(sendButton)
 
         view.addSubview(wallStack)
 
@@ -60,6 +65,9 @@ public final class HomeViewController: UIViewController {
 
         walletBalanceTitle.text = "home.wallet_balance.title".localized
 
+        sendButton.setTitleColor(.blue, for: .normal)
+        sendButton.setTitle("Send 0.01 ETH", for: .normal)
+
         viewTransfers.setTitleColor(.blue, for: .normal)
         viewTransfers.setTitle("home.view_transfers_button.title".localized, for: .normal)
 
@@ -68,6 +76,11 @@ public final class HomeViewController: UIViewController {
 
     private func setupBindings() {
         viewModel.balance.bind(to: walletBalanceValue.rx.text)
+            .disposed(by: disposeBag)
+
+        sendButton.rx.tap
+            .map { HomeViewModel.Input.sendEth }
+            .bind(to: viewModel.inputsSubject)
             .disposed(by: disposeBag)
 
         viewTransfers.rx.tap

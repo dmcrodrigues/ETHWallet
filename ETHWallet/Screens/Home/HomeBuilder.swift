@@ -6,6 +6,7 @@ struct HomeBuilder {
     static func makeHome(with router: @escaping Router<HomeViewModel.Route>) -> UIViewController {
         let viewModel = HomeViewModel(
             walletAddress: EthereumAddress("0x70ABd7F0c9Bdc109b579180B272525880Fb7E0cB"),
+            transferRecipient: EthereumAddress("0x3c1bd6b420448cf16a389c8b0115ccb3660bb854"),
             walletService: Current.services.wallet,
             storage: Current.storage,
             router: router

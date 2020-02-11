@@ -19,13 +19,14 @@ final class HomeViewModel {
 
     init(
         walletAddress: EthereumAddress,
+        transferRecipient: EthereumAddress,
         walletService: WalletServiceProtocol,
         storage: EthereumKeyStorageProtocol,
         router: @escaping Router<Route>,
         scheduler: ImmediateSchedulerType = MainScheduler.instance
     ) {
         system = Observable.system(
-            initialState: State(wallet: walletAddress),
+            initialState: State(wallet: walletAddress, transferRecipient: transferRecipient),
             reduce: Self.reduce,
             scheduler: scheduler,
             feedback: [
@@ -34,12 +35,27 @@ final class HomeViewModel {
             ]
         ).share()
 
-        Observable.combineLatest(
-            inputsSubject.asObservable(),
-            system.map { $0.wallet }
-            )
-            .subscribe(onNext: { input, account in
-                router(.viewTransfers(wallet: account))
+        inputsSubject.asObservable()
+            .withLatestFrom(system, resultSelector: { ($0, $1) })
+            .subscribe(onNext: { [disposeBag] input, state in
+                switch input {
+                case .viewTransfers:
+                    router(.viewTransfers(wallet: state.wallet))
+                case .sendEth:
+                    guard let account = state.account else { return }
+
+                    Current.services.transfer.transfer(
+                        eth: Decimal(0.01),
+                        fromWallet: state.wallet,
+                        toRecipient: state.transferRecipient,
+                        using: account,
+                        config: nil
+                        )
+                        .subscribe(onNext: { block in
+                            print("Transfer block: \(block)")
+                        })
+                        .disposed(by: disposeBag)
+                }
             })
             .disposed(by: disposeBag)
     }
@@ -160,6 +176,7 @@ extension HomeViewModel {
         }
 
         let wallet: EthereumAddress
+        let transferRecipient: EthereumAddress
 
         var status: Status = .loadingAccount
         var account: EthereumAccount?
@@ -175,6 +192,7 @@ extension HomeViewModel {
 
     enum Input {
         case viewTransfers
+        case sendEth
     }
 
     enum Route {

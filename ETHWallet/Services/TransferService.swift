@@ -16,9 +16,10 @@ public struct TransferServiceConfig {
 public protocol TransferServiceProtocol {
 
     func transfer(
-        eth: Double,
-        from account: EthereumAccount,
-        toRecipient: EthereumAddress,
+        eth: Decimal,
+        fromWallet wallet: EthereumAddress,
+        toRecipient recipient: EthereumAddress,
+        using account: EthereumAccount,
         config: TransferServiceConfig?
     ) -> Observable<String>
 }
@@ -44,9 +45,10 @@ public struct TransferService: TransferServiceProtocol {
     }
 
     public func transfer(
-        eth: Double,
-        from account: EthereumAccount,
-        toRecipient: EthereumAddress,
+        eth: Decimal,
+        fromWallet wallet: EthereumAddress,
+        toRecipient recipient: EthereumAddress,
+        using account: EthereumAccount,
         config: TransferServiceConfig? = nil
     ) -> Observable<String> {
 
@@ -56,10 +58,10 @@ public struct TransferService: TransferServiceProtocol {
 
             do {
                 let data = try contract.data(function: "transferToken", args: [
-                    "0x70ABd7F0c9Bdc109b579180B272525880Fb7E0cB", // Wallet
+                    wallet.value,                                 // Wallet
                     "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Token
-                    "0x3c1bd6b420448cf16a389c8b0115ccb3660bb854", // To
-                    "100000000000000000",                         // Amount
+                    recipient.value,                              // To
+                    eth.toWei.description,                        // Amount
                     ""                                            // Data
                 ])
 
