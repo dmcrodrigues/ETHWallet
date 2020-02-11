@@ -9,12 +9,18 @@ public let Current = World()
 
 
 public struct World {
+    public var storage: EthereumKeyStorage
     public var ethClient: EthereumClient
     public var services: Services
 
   init(
     network: Network = .ropstenTestnet
   ) {
+
+    guard let storage = EthereumKeyStorage()
+        else { fatalError("Unexpected failure while initialising storage") }
+
+    self.storage = storage
     self.ethClient = EthereumClient(url: network.url)
     self.services = Services(
         wallet: WalletService(client: ethClient),

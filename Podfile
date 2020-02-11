@@ -13,9 +13,12 @@ target 'ETHWallet' do
   pod 'web3.swift', '~> 0.3'
 
   pod 'RxSwift', '~> 5.0'
+  pod 'RxSwiftExt', '~> 5.2'
   pod 'RxCocoa', '~> 5.0'
   pod 'RxFeedback', '~> 3.0'
   pod 'RxDataSources', '~> 4.0'
+
+  pod 'Valet', '~> 3.2'
 
   target 'ETHWalletTests' do
     inherit! :search_paths

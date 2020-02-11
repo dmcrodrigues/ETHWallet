@@ -14,6 +14,15 @@ PODS:
   - RxRelay (5.0.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - Valet (3.2.8)
   - web3.swift (0.3.4):
     - BigInt (~> 5.0.0)
 
@@ -22,6 +31,8 @@ DEPENDENCIES:
   - RxDataSources (~> 4.0)
   - RxFeedback (~> 3.0)
   - RxSwift (~> 5.0)
+  - RxSwiftExt (~> 5.2)
+  - Valet (~> 3.2)
   - web3.swift (~> 0.3)
 
 SPEC REPOS:
@@ -33,6 +44,8 @@ SPEC REPOS:
     - RxFeedback
     - RxRelay
     - RxSwift
+    - RxSwiftExt
+    - Valet
     - web3.swift
 
 SPEC CHECKSUMS:
@@ -43,8 +56,10 @@ SPEC CHECKSUMS:
   RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  Valet: 16d0537d70db79d9ba953b9060b5da4fb8004e51
   web3.swift: 107bfa1ccc14b2c2aa03035f6a395e32682a4429
 
-PODFILE CHECKSUM: d32ab8ab53625087b603f177f07eb22aa6e508b8
+PODFILE CHECKSUM: 6f2cc970468b753481cd5d2f62f8043e5c2e6c20
 
 COCOAPODS: 1.8.4

@@ -12,16 +12,24 @@
 		A6A436CE23EDDA6900B3A058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A436CD23EDDA6900B3A058 /* AppDelegate.swift */; };
 		A6A436D023EDDA6900B3A058 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A436CF23EDDA6900B3A058 /* SceneDelegate.swift */; };
 		A6A436D223EDDA6900B3A058 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A436D123EDDA6900B3A058 /* ViewController.swift */; };
-		A6A436D523EDDA6900B3A058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A436D323EDDA6900B3A058 /* Main.storyboard */; };
 		A6A436D723EDDA6A00B3A058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6A436D623EDDA6A00B3A058 /* Assets.xcassets */; };
 		A6A436DA23EDDA6A00B3A058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A436D823EDDA6A00B3A058 /* LaunchScreen.storyboard */; };
 		A6A436E523EDDA6A00B3A058 /* ETHWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A436E423EDDA6A00B3A058 /* ETHWalletTests.swift */; };
+		A6C4802123F32A2F00E378EF /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4802023F32A2F00E378EF /* HomeBuilder.swift */; };
+		A6C4802623F331C800E378EF /* String+Localisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C4802523F331C800E378EF /* String+Localisation.swift */; };
+		A6C4802F23F334FE00E378EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6C4803123F334FE00E378EF /* Localizable.strings */; };
 		A6CE43EE23F1E059004C6D41 /* ERC20+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE43ED23F1E059004C6D41 /* ERC20+Rx.swift */; };
 		A6CE43F023F1E0E7004C6D41 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE43EF23F1E0E7004C6D41 /* Network.swift */; };
 		A6CE43F223F1E4AA004C6D41 /* EthereumClient+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE43F123F1E4AA004C6D41 /* EthereumClient+Rx.swift */; };
 		A6CE43F523F213A1004C6D41 /* ERC20Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE43F423F213A1004C6D41 /* ERC20Service.swift */; };
 		A6CE43F723F213E1004C6D41 /* TransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE43F623F213E1004C6D41 /* TransferService.swift */; };
 		A6CE43F923F214E2004C6D41 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE43F823F214E2004C6D41 /* World.swift */; };
+		A6CE43FB23F217C9004C6D41 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE43FA23F217C9004C6D41 /* AppCoordinator.swift */; };
+		A6CE43FD23F2192F004C6D41 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE43FC23F2192F004C6D41 /* HomeViewController.swift */; };
+		A6CE440123F21C13004C6D41 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE440023F21C13004C6D41 /* HomeViewModel.swift */; };
+		A6CE440423F22449004C6D41 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE440323F22449004C6D41 /* Router.swift */; };
+		A6CE440723F227B0004C6D41 /* KeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE440623F227B0004C6D41 /* KeyStorage.swift */; };
+		A6CE440923F2A89C004C6D41 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE440823F2A89C004C6D41 /* Setter.swift */; };
 		A6DE0AAA23F1DC2800B30CAE /* WalletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DE0AA923F1DC2800B30CAE /* WalletService.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,19 +64,27 @@
 		A6A436CD23EDDA6900B3A058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6A436CF23EDDA6900B3A058 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A6A436D123EDDA6900B3A058 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A6A436D423EDDA6900B3A058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6A436D623EDDA6A00B3A058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A6A436D923EDDA6A00B3A058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6A436DB23EDDA6A00B3A058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6A436E023EDDA6A00B3A058 /* ETHWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ETHWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A436E423EDDA6A00B3A058 /* ETHWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETHWalletTests.swift; sourceTree = "<group>"; };
 		A6A436E623EDDA6A00B3A058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6C4802023F32A2F00E378EF /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		A6C4802523F331C800E378EF /* String+Localisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localisation.swift"; sourceTree = "<group>"; };
+		A6C4802B23F3326300E378EF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A6C4803023F334FE00E378EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A6CE43ED23F1E059004C6D41 /* ERC20+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ERC20+Rx.swift"; sourceTree = "<group>"; };
 		A6CE43EF23F1E0E7004C6D41 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		A6CE43F123F1E4AA004C6D41 /* EthereumClient+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EthereumClient+Rx.swift"; sourceTree = "<group>"; };
 		A6CE43F423F213A1004C6D41 /* ERC20Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERC20Service.swift; sourceTree = "<group>"; };
 		A6CE43F623F213E1004C6D41 /* TransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferService.swift; sourceTree = "<group>"; };
 		A6CE43F823F214E2004C6D41 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		A6CE43FA23F217C9004C6D41 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A6CE43FC23F2192F004C6D41 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A6CE440023F21C13004C6D41 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A6CE440323F22449004C6D41 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A6CE440623F227B0004C6D41 /* KeyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStorage.swift; sourceTree = "<group>"; };
+		A6CE440823F2A89C004C6D41 /* Setter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setter.swift; sourceTree = "<group>"; };
 		A6DE0AA923F1DC2800B30CAE /* WalletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletService.swift; sourceTree = "<group>"; };
 		C6C7B94B9BD2D9EE03476F46 /* Pods-ETHWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETHWallet.release.xcconfig"; path = "Target Support Files/Pods-ETHWallet/Pods-ETHWallet.release.xcconfig"; sourceTree = "<group>"; };
 		E21FB3E296A0B7AC3C52955B /* Pods-ETHWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETHWallet.debug.xcconfig"; path = "Target Support Files/Pods-ETHWallet/Pods-ETHWallet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,17 +145,20 @@
 		A6A436CC23EDDA6900B3A058 /* ETHWallet */ = {
 			isa = PBXGroup;
 			children = (
-				A6CE43F323F21386004C6D41 /* Services */,
 				A6CE43EC23F1E04D004C6D41 /* Extensions */,
+				A6CE440223F22441004C6D41 /* Router */,
+				A6CE43F323F21386004C6D41 /* Services */,
+				A6CE440523F227A5004C6D41 /* Storage */,
+				A6C4802C23F333CF00E378EF /* Network */,
 				A6A436CD23EDDA6900B3A058 /* AppDelegate.swift */,
 				A6A436CF23EDDA6900B3A058 /* SceneDelegate.swift */,
+				A6CE43FA23F217C9004C6D41 /* AppCoordinator.swift */,
+				A6CE43FE23F21932004C6D41 /* Screens */,
 				A6A436D123EDDA6900B3A058 /* ViewController.swift */,
-				A6A436D323EDDA6900B3A058 /* Main.storyboard */,
-				A6A436D623EDDA6A00B3A058 /* Assets.xcassets */,
 				A6A436D823EDDA6A00B3A058 /* LaunchScreen.storyboard */,
 				A6A436DB23EDDA6A00B3A058 /* Info.plist */,
-				A6CE43EF23F1E0E7004C6D41 /* Network.swift */,
 				A6CE43F823F214E2004C6D41 /* World.swift */,
+				A6C4802223F3314500E378EF /* Resources */,
 			);
 			path = ETHWallet;
 			sourceTree = "<group>";
@@ -153,11 +172,30 @@
 			path = ETHWalletTests;
 			sourceTree = "<group>";
 		};
+		A6C4802223F3314500E378EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6A436D623EDDA6A00B3A058 /* Assets.xcassets */,
+				A6C4803123F334FE00E378EF /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A6C4802C23F333CF00E378EF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A6CE43EF23F1E0E7004C6D41 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		A6CE43EC23F1E04D004C6D41 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				A6CE43F123F1E4AA004C6D41 /* EthereumClient+Rx.swift */,
 				A6CE43ED23F1E059004C6D41 /* ERC20+Rx.swift */,
+				A6CE440823F2A89C004C6D41 /* Setter.swift */,
+				A6C4802523F331C800E378EF /* String+Localisation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -170,6 +208,40 @@
 				A6CE43F623F213E1004C6D41 /* TransferService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A6CE43FE23F21932004C6D41 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A6CE43FF23F21936004C6D41 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A6CE43FF23F21936004C6D41 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A6CE43FC23F2192F004C6D41 /* HomeViewController.swift */,
+				A6CE440023F21C13004C6D41 /* HomeViewModel.swift */,
+				A6C4802023F32A2F00E378EF /* HomeBuilder.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A6CE440223F22441004C6D41 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A6CE440323F22449004C6D41 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A6CE440523F227A5004C6D41 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A6CE440623F227B0004C6D41 /* KeyStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		A765A2C8163AD304162AE96D /* Frameworks */ = {
@@ -248,7 +320,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = A6A436C123EDDA6900B3A058;
 			productRefGroup = A6A436CB23EDDA6900B3A058 /* Products */;
@@ -267,8 +338,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A436DA23EDDA6A00B3A058 /* LaunchScreen.storyboard in Resources */,
+				A6C4802F23F334FE00E378EF /* Localizable.strings in Resources */,
 				A6A436D723EDDA6A00B3A058 /* Assets.xcassets in Resources */,
-				A6A436D523EDDA6900B3A058 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,16 +421,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6CE43FB23F217C9004C6D41 /* AppCoordinator.swift in Sources */,
 				A6DE0AAA23F1DC2800B30CAE /* WalletService.swift in Sources */,
 				A6A436D223EDDA6900B3A058 /* ViewController.swift in Sources */,
 				A6CE43F523F213A1004C6D41 /* ERC20Service.swift in Sources */,
+				A6C4802623F331C800E378EF /* String+Localisation.swift in Sources */,
 				A6CE43F023F1E0E7004C6D41 /* Network.swift in Sources */,
 				A6CE43F923F214E2004C6D41 /* World.swift in Sources */,
 				A6A436CE23EDDA6900B3A058 /* AppDelegate.swift in Sources */,
 				A6A436D023EDDA6900B3A058 /* SceneDelegate.swift in Sources */,
+				A6CE440123F21C13004C6D41 /* HomeViewModel.swift in Sources */,
 				A6CE43F723F213E1004C6D41 /* TransferService.swift in Sources */,
+				A6CE440423F22449004C6D41 /* Router.swift in Sources */,
 				A6CE43F223F1E4AA004C6D41 /* EthereumClient+Rx.swift in Sources */,
 				A6CE43EE23F1E059004C6D41 /* ERC20+Rx.swift in Sources */,
+				A6CE43FD23F2192F004C6D41 /* HomeViewController.swift in Sources */,
+				A6CE440923F2A89C004C6D41 /* Setter.swift in Sources */,
+				A6C4802123F32A2F00E378EF /* HomeBuilder.swift in Sources */,
+				A6CE440723F227B0004C6D41 /* KeyStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,20 +461,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A6A436D323EDDA6900B3A058 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6A436D423EDDA6900B3A058 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A6A436D823EDDA6A00B3A058 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A6A436D923EDDA6A00B3A058 /* Base */,
+				A6C4802B23F3326300E378EF /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A6C4803123F334FE00E378EF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6C4803023F334FE00E378EF /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
