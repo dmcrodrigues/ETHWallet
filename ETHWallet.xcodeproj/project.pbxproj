@@ -11,7 +11,6 @@
 		59794664DAF84633A3E6560E /* Pods_ETHWalletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E414F0966936BB92FCE3E8 /* Pods_ETHWalletTests.framework */; };
 		A6A436CE23EDDA6900B3A058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A436CD23EDDA6900B3A058 /* AppDelegate.swift */; };
 		A6A436D023EDDA6900B3A058 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A436CF23EDDA6900B3A058 /* SceneDelegate.swift */; };
-		A6A436D223EDDA6900B3A058 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A436D123EDDA6900B3A058 /* ViewController.swift */; };
 		A6A436D723EDDA6A00B3A058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6A436D623EDDA6A00B3A058 /* Assets.xcassets */; };
 		A6A436DA23EDDA6A00B3A058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A436D823EDDA6A00B3A058 /* LaunchScreen.storyboard */; };
 		A6A436E523EDDA6A00B3A058 /* ETHWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A436E423EDDA6A00B3A058 /* ETHWalletTests.swift */; };
@@ -68,7 +67,6 @@
 		A6A436CA23EDDA6900B3A058 /* ETHWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETHWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A436CD23EDDA6900B3A058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6A436CF23EDDA6900B3A058 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A6A436D123EDDA6900B3A058 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A6A436D623EDDA6A00B3A058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6A436DB23EDDA6A00B3A058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6A436E023EDDA6A00B3A058 /* ETHWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ETHWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +162,6 @@
 				A6A436CF23EDDA6900B3A058 /* SceneDelegate.swift */,
 				A6CE43FA23F217C9004C6D41 /* AppCoordinator.swift */,
 				A6CE43FE23F21932004C6D41 /* Screens */,
-				A6A436D123EDDA6900B3A058 /* ViewController.swift */,
 				A6A436D823EDDA6A00B3A058 /* LaunchScreen.storyboard */,
 				A6A436DB23EDDA6A00B3A058 /* Info.plist */,
 				A6CE43F823F214E2004C6D41 /* World.swift */,
@@ -446,7 +443,6 @@
 			files = (
 				A6CE43FB23F217C9004C6D41 /* AppCoordinator.swift in Sources */,
 				A6DE0AAA23F1DC2800B30CAE /* WalletService.swift in Sources */,
-				A6A436D223EDDA6900B3A058 /* ViewController.swift in Sources */,
 				A6C4803623F33A9E00E378EF /* TransfersViewController.swift in Sources */,
 				A6C4803423F33A9300E378EF /* TransfersBuilder.swift in Sources */,
 				A6CE43F523F213A1004C6D41 /* ERC20Service.swift in Sources */,
