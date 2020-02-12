@@ -19,7 +19,7 @@ struct HomeBuilder {
 
         let preLoadedPrivateKey = ProcessInfo.processInfo.environment["PRIVATE_KEY"]
 
-        let message = preLoadedPrivateKey == nil
+        let message = preLoadedPrivateKey?.isEmpty ?? true
             ? "load_account.message.default".localized
             : "load_account.message.preloaded_key".localized
 
@@ -35,6 +35,7 @@ struct HomeBuilder {
                 title: "load_account.confirm_button.title".localized,
                 style: .default,
                 handler: { action in
+                    assert(alert.textFields?[0].text?.isEmpty == false, "Private key cannot be empty")
                     completion(alert.textFields?[0].text)
                 }
             )
