@@ -8,6 +8,7 @@ import web3
 
 final class HomeViewModel {
     private let system: Observable<State>
+    private let router: Router<Route>
     private let disposeBag = DisposeBag()
 
     let inputsSubject = PublishRelay<Input>()
@@ -25,7 +26,9 @@ final class HomeViewModel {
         router: @escaping Router<Route>,
         scheduler: ImmediateSchedulerType = MainScheduler.instance
     ) {
-        system = Observable.system(
+        self.router = router
+
+        self.system = Observable.system(
             initialState: State(wallet: walletAddress, transferRecipient: transferRecipient),
             reduce: Self.reduce,
             scheduler: scheduler,
@@ -34,10 +37,17 @@ final class HomeViewModel {
                 Feedbacks.whenLoadingBalance(walletService: walletService, scheduler: scheduler)
             ]
         ).share()
+    }
+
+    func viewDidLoad() {
+        system
+            .debug("[Home]")
+            .subscribe()
+            .disposed(by: disposeBag)
 
         inputsSubject.asObservable()
             .withLatestFrom(system, resultSelector: { ($0, $1) })
-            .subscribe(onNext: { [disposeBag] input, state in
+            .subscribe(onNext: { [disposeBag, router] input, state in
                 switch input {
                 case .viewTransfers:
                     router(.viewTransfers(wallet: state.wallet))
@@ -57,13 +67,6 @@ final class HomeViewModel {
                         .disposed(by: disposeBag)
                 }
             })
-            .disposed(by: disposeBag)
-    }
-
-    func viewDidLoad() {
-        system
-            .debug("[Home]")
-            .subscribe()
             .disposed(by: disposeBag)
     }
 }
